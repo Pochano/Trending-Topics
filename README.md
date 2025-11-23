@@ -1,3 +1,6 @@
+### Alumno: Jose Miguel Valdivia Castillo
+### Profesor: Erick Mauricio Gomez Nieto
+
 
 ## Descripción
 Se busca implementar un **Segment Tree optimizado y persistente** para almacenar y consultar los $k$-*trending topics* (tópicos de tendencia) más relevantes en un rango de tiempo variable a partir de un conjunto de noticias.
@@ -46,30 +49,6 @@ Una raíz ($R_t$) apunta a una estructura de árbol que resume los tópicos desd
 Una nueva raíz ($R_{t+1}$) se crea, compartiendo la mayoría de los nodos del árbol antiguo ($R_t$) y creando una nueva ruta de nodos modificados que reflejan la inserción del nuevo tópico principal de la noticia.
 [Conceptual representation of the tree's state at time 't+1' showing shared and new nodes]
 
----
-
-##  Menú de Ejecución
-
-### Configuración Inicial
-Al inicio, se solicita al usuario ingresar el valor de **$k$** (el número máximo de tópicos principales a mantener en cada nodo y a consultar).
-
-###  Menú Principal
-Las opciones disponibles para la inserción de datos y las consultas son:
-
-1.  **Insertar y consultar 1 dato**
-    Procesa la siguiente noticia disponible y ejecuta una consulta inmediata para verificar el impacto de esa inserción.
-2.  **Inserción 10% y cada 1% una query**
-    Procesa el 10% de los datos totales en lotes. Realiza una consulta después de cada 1% de datos insertados.
-3.  **Ejecución completa y query instantánea**
-    Procesa el 100% de las noticias. Realiza una consulta instantánea después de **cada inserción** de una noticia.
-4.  **Ejecución completa y query al final**
-    Procesa el 100% de las noticias. Una vez finalizada la inserción de todos los datos, permite ejecutar una consulta única.
-5.  **Ejecutar query**
-    Permite al usuario ejecutar una consulta especificando manualmente el **rango de tiempo** (`[RI, RD]`) y el número de tópicos ($k'$).
-6.  **Salir**
-    Finaliza la ejecución del programa.
-
----
 
 ## Dependencias
 
